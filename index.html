@@ -12,51 +12,54 @@
         <link href="http://fonts.cdnfonts.com/css/montreal" rel="stylesheet">
         <link rel="icon" href="img/favicon.png">
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/footer.css">
 
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <nav>
-            <input type="checkbox" id="check">
+            <input type="checkbox" id="check">  
                 <label for="check" class="checkbtn"><i class="fas fa-bars"></i> </label>
                 <label class="logo">
                     <a href="index.html"><img src="img/logo.jpeg" alt=""></a>                
-                </label> 
+                </label>                
                     <ul>
                        <li><a class="active" href="index.html">Home</a></li> 
-                       <li><a href="about.html">About</a></li>                 
-                       <li><a href="services.html">Services</a></li> 
+                       <li><a href="about.html">About</a></li> 
                        <li><a href="branches.html">Branches</a></li> 
                        <li><a href="blog.html">Blog</a></li> 
                        <li><a href="contact.html">Contact</a></li> 
+                       <li><a href="services.html">Services</a></li> 
                     </ul>
             </div>
         </nav>
         <!-- Slideshow container -->
-        <div class="container">
+        <div class="slideshow-container">
 
             <!-- Full-width images with number and caption text -->
-            <div class="mySlides">
-                <img src="img/Loan/business-loan.png" style="width:100%; height: 100vh; ">
+            <div class="mySlides fade">
+                <img src="img/Loan/home.jpeg" style="width:100%;" class="Slides">
             </div>
-            
-            <div class="mySlides">
-                <img src="img/Loan/car-loan.jpg" style="width:100%; height:100vh;">
+        
+            <div class="mySlides fade">
+                <img src="img/Loan/LAP.jpg" style="width:100%;" class="Slides">
             </div>
-            
-            <div class="mySlides">
-                <img src="img/Loan/Home.png" style="width:100%; height: 100vh;">
+        
+            <div class="mySlides fade">
+                <img src="img/Loan/personalloan.jpeg" style="width:100%;" class="Slides">
             </div>
-
-            <div class="mySlides">
-                <img src="img/Loan/Personal-Loan.jpg" style="width:100%; height: 100vh;">
+            <div class="mySlides fade">
+                <img src="img/Loan/bussiness.jpeg" style="width:100%;" class="Slides">
             </div>
-
-            <div class="mySlides">
-                <img src="img/Loan/LAP.jpg" style="width:100%; height: 100vh;">
+            <div class="mySlides fade">
+                <img src="img/Loan/car-loan.jpg" style="width:100%;" class="Slides">
             </div>
-
+        
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+
             
         <!-- The dots/circles -->
         <div style="text-align:center">
@@ -65,52 +68,10 @@
             <span class="dot" onclick="currentSlide(3)"></span>
             <span class="dot" onclick="currentSlide(4)"></span>
             <span class="dot" onclick="currentSlide(5)"></span>
-        </div>        
+        </div>  
 
-        <div class="grid-container">
-            
-            <div>
-                <h4>Bussiness Loan</h4>
-                <p>
-                    Business loan is a funding support offered by Banks and NBFCs to
-                    meet the financial requirements of self-employed customers. It
-                    can be availed by individuals, MSMEs, business owners, entrepreneurs, and several other entities.
-                </p>
-            </div>
-            <div>
-                <h4>Home Loan</h4>
-                <p>Get Same Day Home Purchase Loan Approval. Contact Our Dedicated Team For More Information.
-                    We Set the Standard in the Mortgage Industry and Can Close in as Little as 21 Days.
-                    Save Time and Money.</p>
-            </div>
-            <div>
-                <h4>New Car Loan</h4>
-                <p>Car finance refers to the various financial products which allow someone to acquire a car, including
-                    car loans and leases.</p>
-            </div>            
-            <div>
-                <h4> Used Car Loan</h4>
-                <p>Car finance refers to the various financial products which allow someone to acquire a car, including
-                    car loans and leases.</p>
-            </div>
-            <div>
-                <h4>Lap Loan</h4>
-                <p>Another name for Loan against property is a secured loan. The security in this kind
-                   of loan is the property owned by the person applying for the loan. The value of your property decides the amount
-                   of potential loan you will be sanctioned.</p>
-            </div>
-            <div>
-                <h4>Personal Loan</h4>
-                <p>
-                    Personal loan is a short to medium term unsecured loan granted to an individual.
-                    It is commonly used to meet such financial needs as debt consolidation,
-                    wedding expenses, unexpected medical costs, home renovation and others.
-                </p>
-            </div>
-           
-        </div>
-
-        <div calss="newcar" style="margin: 10px 10% 10px 10%;">
+       
+        <div calss="newcar" style="padding: 50px;">
             <h3>Car Loan for New Car or Car Loan for Used Car?</h3>
             <p>If you are planning to take a car loan to buy a car,
                    there is a slight chance that you are confused about
@@ -155,6 +116,48 @@
                 </ul>
             </div>     
         </div>
+
+        <!----------- blocks ------------->
+
+        <div class="grid-container">
+            <div class="grid-item">
+                <h4>Bussiness Loan</h4>
+                <p> Business loan is a funding support offered by Banks and NBFCs to
+                    meet the financial requirements of self-employed customers. It
+                    can be availed by individuals, MSMEs, business owners, entrepreneurs, and several other entities.
+                </p>
+            </div>
+            <div class="grid-item" style="margin-left: 15px;">
+                <h4>Home Loan</h4>
+                <p>Get Same Day Home Purchase Loan Approval. Contact Our Dedicated Team For More Information.
+                    We Set the Standard in the Mortgage Industry and Can Close in as Little as 21 Days.
+                    Save Time and Money.</p>
+            </div>
+                
+            <div class="grid-item" style="margin-left: 15px;">
+                <h4>Lap Loan</h4>
+                <p>Another name for Loan against property is a secured loan. The security in this kind
+                   of loan is the property owned by the person applying for the loan. The value of your property decides the amount
+                   of potential loan you will be sanctioned.</p>
+            </div>
+            <div class="grid-item">
+                <h4>Personal Loan</h4>
+                <p>
+                    Personal loan is a short to medium term unsecured loan granted to an individual.
+                    It is commonly used to meet such financial needs as debt consolidation,
+                    wedding expenses, unexpected medical costs, home renovation and others.
+                </p>
+                </div>
+                <div class="grid-item" style="margin-left: 15px;">
+                    <h4>New Car Loan</h4>
+                    <p>Car finance refers to the various financial products which allow someone to acquire a car, including
+                            car loans and leases.</p>
+                </div>  
+            <div class="grid-item" style="margin-left: 15px;">
+                <h4>Used Car Loan</h4>
+            </div>
+        </div>
+        
              
         <footer>
             <div class="footer-logo d-flex">
@@ -182,5 +185,6 @@
         </footer>
 
         <script src="css/bootstrap-3.3.7-dist/js/slides.js"></script>
+
     </body>
 </html>

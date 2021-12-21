@@ -7,22 +7,19 @@ body {
   margin: 0;
   font-family: montreal;
 }
+
 nav{
   background-color: #31a0d8;
   height: 80px;
   width: 100%;
   position:fixed;
   top: 0;
-}
-label.logo{
-  line-height: 80px;
-  padding: 0 100px;
-  font-size: 35px;
-  font-weight: bold;
+  /* display: flex;
+  justify-content: space-around; */
 }
 nav ul{
   float: right;
-  margin-right: 20px;
+  margin-right: 100px;
 }
 nav ul li{
   display:inline-block;
@@ -95,19 +92,20 @@ a.active,a:hover{
   .grid-container {
     display: block !important;
   }
-  .container{
-    width: 150%;
-  }
   .grid-container p{
     font-size: 18px !important;
   }
   .grid-container h4{
     font-size: 20px !important;
   }
+  .logo  img {
+    margin-left: 0 !important;
+}
 } 
 .logo  img {
     height: 50px;
     margin-top: 0.9rem;
+    margin-left: 100px;
 }
 img{
     max-width: 100%;
@@ -123,12 +121,17 @@ p,ul,li{
 h3{
   margin-top: 10px;
 }
-
-/* Slideshow container */
-.container {
-  margin-top: 4.5rem;  
+/* ----------slides------------ */
+.slideshow-container {
+  margin-top: 4.5rem
 }
 
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  max-width: 1200px;
+  margin: auto;
+}
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
@@ -137,18 +140,20 @@ h3{
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
-  background-color: #717171;
+  color: #fff;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 40px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
 
 /* Position the "next button" to the right */
+.prev{
+  left: 200px;
+}
 .next {
-  right: 0;
+  right: 200px;
   border-radius: 3px 0 0 3px;
 }
 
@@ -156,7 +161,6 @@ h3{
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
-
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
@@ -173,6 +177,14 @@ h3{
   background-color: #717171;
 }
 
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
 @-webkit-keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
@@ -182,114 +194,35 @@ h3{
   from {opacity: .4}
   to {opacity: 1}
 }
-
+/* -------------blocks-------------- */
 .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 10px;
-    padding: 10px;
-    margin: 10px 10% 10px 10%;
+  display: grid;
+  grid-row-gap: 50px;
+  grid-template-columns: auto auto auto;
+  padding: 50px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .grid-item {
+    margin-left: 0 !important;
+    margin-top: 10px;
   }
-  
-  .grid-container > div {
-    background-color: rgba(248, 248, 248, 0.8);
-    text-align: center;
-    padding: 20px 0;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    margin-top: 1rem;
-    border: 5px solid #31a0d8;
-  }
-  .grid-container p{
-      margin: 5px;
-      text-align: initial;
-  }
+  .prev, .next {top:25%}
+}
   .newcar{
     background-color: rgb(246, 243, 243);
   }
 
-  .newcar,h3,p{
-      display: flex;
-      /* justify-content:center ; */
+  .newcar{
       text-align: left;
   }
-  .footer-logo{
-      width: 20%;
-      margin: 10px 10% 10px 10%;
-  }
-  .footer-p{
-    margin: 20px 50% 0px 10%;
-  }
-  
-ul.social_icon li a {
-    border: 1px solid #7c7c7c;
-    color: #fff;
-    display: block;
-    font-size: 16px;
-    height: 38px;
-    line-height: 38px !important;
-    text-align: center;
-    width: 38px;
-    border-radius: 4px;
-    position: relative;
-    margin-right: 2px;
-    z-index: 1;
-    padding: 0;
-	transition-property: background, border-radius;
-    transition-duration: 1s;
-    transition-timing-function: linear;
-}
-
-ul.social_icon li {
-    display: inline-block;
-}
-ul.social_icon li a.facebook:after {
-    background: #3b5998;
-}
-ul.social_icon li a.facebook {
-    background: #3b5998;
-}
-ul.social_icon li a.dribble:hover {
-background: #ea4c89;
-border-radius: 50%;
-}
-ul.social_icon li a.dribble {
-background: #ea4c89;
-}
-ul.social_icon li a.instagram:hover {
-background: #517fa4;
-border-radius: 50%;
-}
-ul.social_icon li a.instagram {
-background: #517fa4;
-}
-ul.social_icon li a.twitter:hover {
-background: #00aced;
-border-radius: 50%;
-}
-ul.social_icon li a.twitter {
-background: #00aced;
-}
-ul.social_icon li a.facebook:hover {
-background: #3b5998;
-border-radius: 50%;
-}
-ul.social_icon li a.fa-linkedin:hover {
-background: #4EBBFF;
-border-radius: 50%;
-}
-ul.social_icon li a.fa-linkedin {
-background: #4EBBFF;
-}
-
-.copywrite-text{
-    margin-left: -50%;
-}
-.copywrite-text a{
-    text-decoration: none;
-    color: black;
-}
-
 /* -----------Mobile view----------- */
 
 @media only screen and (max-width: 600px) {
